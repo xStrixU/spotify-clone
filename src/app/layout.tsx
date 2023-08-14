@@ -1,7 +1,15 @@
+import { Figtree } from 'next/font/google';
+
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 import '@/common/assets/styles/globals.css';
+
+const figtree = Figtree({
+	subsets: ['latin', 'latin-ext'],
+	display: 'swap',
+	variable: '--font-figtree',
+});
 
 export const metadata: Metadata = {
 	title: 'Spotify - Web Player: Music for everyone',
@@ -10,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { readonly children: ReactNode }) => (
-	<html lang="en">
+	<html lang="en" className={figtree.variable}>
 		<body>{children}</body>
 	</html>
 );
