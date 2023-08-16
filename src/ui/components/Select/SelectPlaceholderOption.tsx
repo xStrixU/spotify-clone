@@ -9,7 +9,7 @@ export const SelectPlaceholderOption = ({
 	hidden,
 	children,
 }: SelectPlaceholderOptionProps) => (
-	<option value="" selected disabled hidden={hidden}>
+	<option value="" disabled hidden={hidden}>
 		{children}
 	</option>
 );
